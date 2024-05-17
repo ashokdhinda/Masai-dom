@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+nav{
+   background-color:#007185;
+   padding: 20px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    ul{
+  display: flex;
+  justify-content: space-evenly;
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+    }
+}
+#contanier{
+  width: 85%;
+  margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    
+    div{
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        img{
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+        }
+        p{
+            padding: 5px;
+        }
+    }
+}
+#filterselect{
+    height: 50px;
+    padding: 0  50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    color: white;
+    text-align: center;
+   
+}
+ 
+</style>
+<body>
+<nav>
+    <ul>
+        <a href="">Home</a>
+        <a href="cart.html">Cart</a>
+    </ul>
+  
+</nav>
+<select name="" id="filterselect" onchange="filterFns()" >
+    <option value="">Filter items</option>
+    <option value="one">Filter less than rs.20</option>
+    <option value="two">Filter more than 20 less than 50</option>
+    <option value="three">More then 50</option>
+    <option value="sortltoh">Low to high</option>
+    <option value="sorthtol">High to low</option>
+    <option value="sortatoz">Show the data from A to Z</option>
+    <option value="sortztoa">Show the data from Z to A</option>
+    <option value="sortmen">Show the men data</option>
+    <option value="sortwomen">Show the women data</option>
+</select>
+  <!-- <button onclick="filterFn()">Filter less than rs.20</button>
+  <button onclick="filterFn2()">Filter more than 20 less than 50</button>
+  <button onclick="filterFn3()">More then 50</button>
+  <button onclick="sortltoh()">Low to high</button>
+  <button onclick="sorthtol()">High to low</button>
+  <button onclick="sortatoz()">Show the data from A to Z</button>
+  <button onclick="sortztoa()">Show the data from Z to A</button>
+  <button onclick="sortmen()">Show the men data</button>
+  <button onclick="sortwomen()" >Show the women data</button> -->
+    <div id="contanier">
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
